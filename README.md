@@ -5,12 +5,12 @@
 <h1 align="center">🍮 FLANDEX</h1>
 
 <p align="center">
-  <strong>Le Pokédex ultime pour les amateurs de flan en Île-de-France.</strong>
+  <strong>The ultimate Pokédex for flan lovers in Île-de-France.</strong>
 </p>
 
 <p align="center">
   <a href="https://flandex.vercel.app" target="_blank" rel="noopener noreferrer">
-    <img src="https://img.shields.io/badge/D%C3%A9mo_Live-flandex.vercel.app-FF9800?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo" />
+    <img src="https://img.shields.io/badge/Live_Demo-flandex.vercel.app-FF9800?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo" />
   </a>
 </p>
 
@@ -24,49 +24,49 @@
 
 ---
 
-## 📖 À propos
+## 📖 About
 
-**Flandex** est une application web mobile-first interactive à mi-chemin entre guide gastronomique et Pokédex. Elle permet de localiser, répertorier et noter les meilleurs flans de Paris et d'Île-de-France (des boulangeries récompensées aux palaces) grâce à une interface gourmande et intuitive.
+**Flandex** is an interactive, mobile-first web application halfway between a culinary guide and a Pokédex. It allows you to locate, index, and rate the best flans (custard tarts) in Paris and the Île-de-France region (from award-winning bakeries to luxury palaces) through a sweet and intuitive interface.
 
 > [!IMPORTANT]
-> **🚀 Tester l'application en direct :**
-> Retrouvez la version en ligne sur <a href="https://flandex.vercel.app" target="_blank" rel="noopener noreferrer"><strong>flandex.vercel.app</strong></a>.
+> **🚀 Try the live application:**
+> Access the online version at <a href="https://flandex.vercel.app" target="_blank" rel="noopener noreferrer"><strong>flandex.vercel.app</strong></a>.
 >
-> *(Note : L'application utilise le LocalStorage pour stocker vos dégustations localement et en toute confidentialité).*
+> *(Note: The application uses LocalStorage to store your tastings locally and completely privately).*
 
 > [!TIP]
-> **Pourquoi ce projet sur mon portfolio ?**
-> Il démontre ma maîtrise des applications monopages (SPA) modernes, de la cartographie interactive (Leaflet) et de l'optimisation de l'expérience utilisateur (UX/UI).
+> **Why is this project in my portfolio?**
+> It showcases my mastery of modern single-page applications (SPA), interactive mapping (Leaflet), and user experience/user interface (UX/UI) optimization.
 
 ---
 
-## ✨ Fonctionnalités Clés
+## ✨ Key Features
 
-* 🗺️ **Carte Interactive (Leaflet) :** Localisez les spécimens autour de vous. Les marqueurs affichent la note du flan et changent de couleur (doré/chocolat) une fois goûtés.
-* 📱 **Le "Flandex" :** Suivez votre progression de capture gastronomique avec un compteur global (ex: `5/50`) et une recherche dynamique.
-* 🏆 **Classements (Élite vs Personnel) :** Comparez le classement officiel de la communauté avec votre propre hiérarchie générée automatiquement selon vos notes.
-* 📝 **Fiche Dégustation :** Enregistrez vos sessions de test (notation par étoiles, critiques personnelles, favoris et date de dégustation).
-* 📊 **Profil & Sauvegardes :** Visualisez vos statistiques globales et exportez/importez vos données de dégustation en JSON.
-
----
-
-## 🛠️ Stack Technique
-
-* **React 19 & TypeScript :** Gestion d'état fluide et robustesse de typage.
-* **React Router v7 :** Navigation rapide et sans rechargement.
-* **Tailwind CSS v4 & DaisyUI v5 :** Design system sur-mesure avec un thème personnalisé (`flantheme`).
-* **Leaflet & CartoDB :** Cartographie interactive légère et performante.
-* **LocalStorage API :** Solution serverless 100% locale respectant la vie privée (aucune base de données requise).
+* 🗺️ **Interactive Map (Leaflet):** Locate flan spots around you. Markers display the flan rating and change color (gold/chocolate) once they have been tasted.
+* 📱 **The "Flandex":** Track your culinary capture progress with a global counter (e.g., `5/50`) and dynamic search.
+* 🏆 **Rankings (Elite vs. Personal):** Compare the community's official ranking with your own custom hierarchy automatically generated based on your ratings.
+* 📝 **Tasting Record:** Log your tastings (star ratings, personal reviews, favorites, and tasting date).
+* 📊 **Profile & Backups:** View your global statistics and export/import your tasting data in JSON format.
 
 ---
 
-## 🧠 Focus Technique
+## 🛠️ Tech Stack
 
-### 1. Filtrage non-linéaire sur slider (UX)
-Pour éviter un slider vide sur les notes (les flans étant quasi tous notés entre `4.0` et `5.0`), j'ai remappé la sensibilité du slider : la première moitié couvre `0.0` à `4.0`, la seconde de `4.0` à `4.9`.
+* **React 19 & TypeScript:** Fluid state management and robust typing.
+* **React Router v7:** Fast navigation without page reloads.
+* **Tailwind CSS v4 & DaisyUI v5:** Custom design system with a tailored theme (`flantheme`).
+* **Leaflet & CartoDB:** Lightweight and high-performance interactive mapping.
+* **LocalStorage API:** 100% local, privacy-respecting serverless solution (no database required).
+
+---
+
+## 🧠 Technical Highlights
+
+### 1. Non-linear slider filtering (UX)
+To avoid a mostly empty slider for ratings (since almost all flans are rated between `4.0` and `5.0`), I remapped the slider's sensitivity: the first half covers `0.0` to `4.0`, while the second half covers `4.0` to `4.9`.
 
 ```typescript
-// Remappage non-linéaire dans MapPage.tsx
+// Non-linear remapping in MapPage.tsx
 const rawRating = sliderValue <= 50 
   ? (sliderValue / 50) * 4.0 
   : 4.0 + ((sliderValue - 50) / 50) * 0.9;
@@ -74,8 +74,8 @@ const rawRating = sliderValue <= 50
 const minRating = parseFloat(rawRating.toFixed(1));
 ```
 
-### 2. Intégration Leaflet avec Tailwind CSS
-Pour conserver le design Tailwind avec la bibliothèque Leaflet, les marqueurs de carte sont générés via des templates HTML personnalisés injectés dynamiquement dans le DOM de la carte.
+### 2. Leaflet Integration with Tailwind CSS
+To maintain the Tailwind design styling alongside the Leaflet library, the map markers are generated via custom HTML templates dynamically injected into the map DOM.
 
 ```typescript
 const createRatingIcon = (rating: number, isEaten: boolean) => {
@@ -97,27 +97,25 @@ const createRatingIcon = (rating: number, isEaten: boolean) => {
 
 ---
 
-## 🚀 Installation & Lancement
+## 🚀 Installation & Setup
 
 ```bash
-# 1. Cloner le projet
-git clone https://github.com/VOTRE_PSEUDO/flandex.git
+# 1. Clone the project
+git clone https://github.com/YOUR_USERNAME/flandex.git
 cd flandex
 
-# 2. Installer les dépendances
+# 2. Install dependencies
 npm install
 
-# 3. Lancer en mode dev
+# 3. Run in development mode
 npm run dev
 
-# 4. Build pour la production
+# 4. Build for production
 npm run build
 ```
 
 ---
 
-## 📄 Licence
+## 📄 License
 
-Ce projet est sous licence MIT - voir le fichier [LICENSE](file:///mnt/c/Users/BaptisteKelagopian/Desktop/code/Flan/flandex/LICENSE) pour plus de détails.
-
-
+This project is licensed under the MIT License - see the [LICENSE](file:///mnt/c/Users/BaptisteKelagopian/Desktop/code/Flan/flandex/LICENSE) file for details.
