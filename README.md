@@ -9,6 +9,12 @@
 </p>
 
 <p align="center">
+  <a href="https://flandex.vercel.app" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/D%C3%A9mo_Live-flandex.vercel.app-FF9800?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo" />
+  </a>
+</p>
+
+<p align="center">
   <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React" />
   <img src="https://img.shields.io/badge/TypeScript-6.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
   <img src="https://img.shields.io/badge/Vite-8.0-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
@@ -21,6 +27,12 @@
 ## 📖 À propos
 
 **Flandex** est une application web mobile-first interactive à mi-chemin entre guide gastronomique et Pokédex. Elle permet de localiser, répertorier et noter les meilleurs flans de Paris et d'Île-de-France (des boulangeries récompensées aux palaces) grâce à une interface gourmande et intuitive.
+
+> [!IMPORTANT]
+> **🚀 Tester l'application en direct :**
+> Retrouvez la version en ligne sur [**flandex.vercel.app**](https://flandex.vercel.app).
+>
+> *(Note : L'application utilise le LocalStorage pour stocker vos dégustations localement et en toute confidentialité).*
 
 > [!TIP]
 > **Pourquoi ce projet sur mon portfolio ?**
