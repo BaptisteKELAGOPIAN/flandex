@@ -30,7 +30,7 @@
 
 > [!IMPORTANT]
 > **🚀 Tester l'application en direct :**
-> Retrouvez la version en ligne sur [**flandex.vercel.app**](https://flandex.vercel.app).
+> Retrouvez la version en ligne sur <a href="https://flandex.vercel.app" target="_blank" rel="noopener noreferrer"><strong>flandex.vercel.app</strong></a>.
 >
 > *(Note : L'application utilise le LocalStorage pour stocker vos dégustations localement et en toute confidentialité).*
 
